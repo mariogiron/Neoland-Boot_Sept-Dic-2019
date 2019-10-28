@@ -58,6 +58,15 @@ class Universidad {
         }
         return resultado;
     }
+    obtenerAlumnosAsignatura(nombreAsignatura) {
+        let cont = 0;
+        for (let alumno of this.alumnos) {
+            for (let asignatura of alumno.asignaturas) {
+                if (asignatura.nombre === nombreAsignatura) cont++
+            }
+        }
+        return cont;
+    }
 }
 
 let profesor1 = new Profesor('Ramón', 'García', 5)
@@ -87,3 +96,8 @@ console.log(uni1.mostrarUniversidad());
 
 console.log(estudiante1.asignaturas[0].profesor.nombre);
 console.log(uni1.alumnos[1].asignaturas[0].profesor.experiencia);
+
+console.log(uni1.obtenerAlumnosAsignatura('Electrónica'));
+
+let fecha = new Date();
+console.log(fecha);
