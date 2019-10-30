@@ -1,0 +1,13 @@
+<h1>Hola Mundo Angular!!</h1>
+<app-saludo></app-saludo>
+
+<app-contador cont="3" (terminaContador)="manejarFinContador($event)"></app-contador>
+<app-contador cont="7" (terminaContador)="manejarFinContador($event)"></app-contador>
+<app-contador cont="12" (terminaContador)="manejarFinContador($event)"></app-contador>
+
+
+<app-suma [num1]="valor" num2="5"></app-suma>
+<app-suma num1="8" num2="2"></app-suma>
+
+<app-formulario></app-formulario>
+<app-calculadora></app-calculadora>

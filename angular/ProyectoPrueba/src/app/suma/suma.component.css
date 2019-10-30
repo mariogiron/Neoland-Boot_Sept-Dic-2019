@@ -1,0 +1,8 @@
+.wrapper {
+    text-align: center;
+    border: 1px solid indigo;
+    width: 120px;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: gray;
+}

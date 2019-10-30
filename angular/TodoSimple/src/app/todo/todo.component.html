@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label>Mensaje</label>
+                <input type="text" class="form-control" [(ngModel)]="tarea.mensaje">
+            </div>
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="tarea.prioridad">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+            <button class="btn btn-block btn-primary" (click)="enviarTarea()">Enviar</button>
+        </div>
+        <div class="col-8" [innerHtml]="mostrarLista()">
+        </div>
+    </div>
+</div>
+
+{{tarea | json}}
