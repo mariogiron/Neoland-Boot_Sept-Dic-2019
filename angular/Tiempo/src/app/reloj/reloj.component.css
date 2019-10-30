@@ -1,0 +1,20 @@
+.reloj {
+    width: 100px;
+    height: 75px;
+}
+
+.fondoRojo {
+    animation: blink 1s infinite;
+    /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes blink {
+    0%, 49% {
+        background-color: rgb(117, 209, 63);
+        border: 3px solid #e50000;
+    }
+    50%, 100% {
+        background-color: #e50000;
+        border: 3px solid rgb(117, 209, 63);
+    }
+}

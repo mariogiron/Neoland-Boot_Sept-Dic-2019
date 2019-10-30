@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Índice</th>
+            <th>Título</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <!-- index, even, odd, first, last -->
+    <tbody>
+        <tr *ngFor="let episodio of episodios; let i = index; let par = even; let impar = odd;" [ngClass]="{ filaPar: par, filaImpar: impar }" >
+            <td>{{ i + 1 }}</td>
+            <td>{{ episodio.title }}</td>
+            <td>{{ episodio.director }}</td>
+            <td>{{ par }} {{ impar }}</td>
+        </tr>
+    </tbody>
+</table>

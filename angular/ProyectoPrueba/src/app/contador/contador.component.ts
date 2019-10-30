@@ -14,11 +14,16 @@ export class ContadorComponent implements OnInit {
   interval: any;
 
   constructor() {
+    console.log('Lanza Constructor CONTADOR');
     this.numero = 10;
     this.terminaContador = new EventEmitter();
+    console.log('CONT', this.cont);
   }
 
   ngOnInit() {
+    console.log('CONT', this.cont);
+    console.log('Lanza ngOnInit CONTADOR');
+    this.comienzaContador();
   }
 
   comienzaContador() {
