@@ -8,11 +8,14 @@
     </thead>
     <!-- index, even, odd, first, last -->
     <tbody>
-        <tr *ngFor="let episodio of episodios; let i = index; let par = even; let impar = odd;" [ngClass]="{ filaPar: par, filaImpar: impar }" >
+        <tr *ngFor="let episodio of episodios; let i = index; let par = even; let impar = odd; let primero = first; let ultimo = last"
+            [ngClass]="{ filaPar: par, filaImpar: impar }">
             <td>{{ i + 1 }}</td>
-            <td>{{ episodio.title }}</td>
-            <td>{{ episodio.director }}</td>
-            <td>{{ par }} {{ impar }}</td>
+            <td>{{ episodio.title  }}</td>
+            <td subrayado>{{ episodio.director }}</td>
+            <td>{{ episodio.mostrarEpisodio() }}</td>
+            <td>{{ par }} {{ impar }} {{ primero }} {{ ultimo }}</td>
+            <td *ngIf="ultimo">Soy el último</td>
         </tr>
     </tbody>
 </table>

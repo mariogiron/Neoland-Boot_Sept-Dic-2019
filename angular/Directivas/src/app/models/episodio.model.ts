@@ -8,4 +8,8 @@ export class Episodio {
         this.director = pDirector;
     }
 
+    mostrarEpisodio() {
+        return `Episodio: ${this.title}, dirigido por ${this.director}`;
+    }
+
 }

@@ -3,16 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { SemaforoComponent } from './semaforo/semaforo.component';
-import { EpisodiosComponent } from './episodios/episodios.component';
-import { SubrayadoDirective } from './directives/subrayado.directive';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SemaforoComponent,
-    EpisodiosComponent,
-    SubrayadoDirective
+    FormularioComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule, FormsModule

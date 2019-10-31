@@ -1,0 +1,4 @@
+<div class="alert" role="alert" *ngFor="let tarea of tareas;"
+    [ngClass]="{ 'alert-success': tarea.completa, 'alert-danger': !tarea.completa}" (click)="completarTarea(tarea)">
+    {{tarea.mensaje}} {{ tarea.prioridad }}
+</div>

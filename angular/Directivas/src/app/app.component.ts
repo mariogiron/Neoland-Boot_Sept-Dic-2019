@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   estiloParrafo: any;
+  departamento: string;
 
   constructor() {
+    this.departamento = 'informática';
     this.estiloParrafo = {
       color: 'white',
       backgroundColor: 'indigo',
