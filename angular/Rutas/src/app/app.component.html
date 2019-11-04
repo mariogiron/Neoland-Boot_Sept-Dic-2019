@@ -1,0 +1,16 @@
+<h1>Cabecera</h1>
+<ul>
+  <li>
+    <a [routerLink]="'/sobremi'">Sobre mi</a>
+  </li>
+  <li>
+    <a [routerLink]="'/contacto'">Contacto</a>
+  </li>
+  <li>
+    <a [routerLink]="'/saludo'">Saludo</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+<button (click)="manejarClick('/sobremi')">Sobre Mi</button>
+<button (click)="manejarClick('/contacto')">Contacto</button>
+<button (click)="manejarClick('/saludo')">Saludo</button>
