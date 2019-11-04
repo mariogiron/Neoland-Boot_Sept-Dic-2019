@@ -1,0 +1,7 @@
+<div class="lista-wrapper">
+    <div class="row">
+        <div *ngFor="let empl of empleados" class="col-6">
+            <app-detalle-empleado [empleado]="empl"></app-detalle-empleado>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img [src]="empleado.imagen" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ empleado.nombre }} {{ empleado.apellidos }}</h5>
+                <p class="card-text">DNI: {{ empleado.dni }}</p>
+                <p class="card-text">EMAIL: {{ empleado.email }}</p>
+                <div class="icon-departamento" [ngSwitch]="empleado.departamento">
+                    <img src="assets/icon-computer.png" *ngSwitchCase="'informatica'">
+                    <img src="assets/icon-design.png" *ngSwitchCase="'diseño'">
+                    <img src="assets/icon-hr.png" *ngSwitchCase="'recursoshumanos'">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
