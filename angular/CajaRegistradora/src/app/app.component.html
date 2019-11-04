@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      CABECERA
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <lista-productos titulo="Comida" [productos]="arrComida"
+        (productoSeleccionado)="manejaProductoSeleccionado($event)"></lista-productos>
+      <lista-productos titulo="Bebida" [productos]="arrBebida"
+        (productoSeleccionado)="manejaProductoSeleccionado($event)"></lista-productos>
+    </div>
+    <div class="col-12 col-md-4">
+      <app-comanda [productos]="productosSeleccionados"></app-comanda>
+    </div>
+  </div>
+</div>

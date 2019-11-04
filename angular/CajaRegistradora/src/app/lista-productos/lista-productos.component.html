@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-12">
+        {{ titulo }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3" *ngFor="let producto of productos" (click)="elegirProducto(producto)">
+        <img [src]="producto.imagen" class="img-fluid">
+        <p>{{ producto.precio }}€</p>
+    </div>
+</div>

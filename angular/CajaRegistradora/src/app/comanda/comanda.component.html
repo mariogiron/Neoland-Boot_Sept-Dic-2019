@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let item of productos">
+        {{ item.producto.nombre }} {{ item.producto.precio }} x {{ item.cantidad }}
+    </li>
+</ul>
+<h4>TOTAL</h4>
+<p>{{ calcularTotal() }}</p>
