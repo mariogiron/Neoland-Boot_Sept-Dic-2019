@@ -11,10 +11,12 @@ export class GameComponent implements OnInit {
   preguntas: Pregunta[];
   preguntaActiva: number;
   preguntasAcertadas: number;
+  mensaje: string;
 
   constructor() {
     this.preguntaActiva = 0;
     this.preguntasAcertadas = 0;
+    this.mensaje = 'Esperando respuesta...';
     this.preguntas = [
       new Pregunta('¿Cuál es el color más bonico?', ['rojo', 'verde', 'amarillo', 'añil'], 2),
       new Pregunta('¿Mejor lenguaje programación?', ['Java', 'PHP', 'Python', 'Javascript'], 1),
@@ -28,14 +30,15 @@ export class GameComponent implements OnInit {
 
   manejarRespuestaSeleccionada($event) {
     if ($event === this.preguntas[this.preguntaActiva].respuestaCorrecta) {
-      alert('Respuesta correcta');
+      // alert('Respuesta correcta');
+      this.mensaje = 'Respuesta correcta';
       this.preguntasAcertadas++;
     } else {
-      alert('Respuesta erronea');
+      this.mensaje = 'Respuesta erronea';
     }
     this.preguntaActiva++;
     if (this.preguntaActiva === this.preguntas.length) {
-      alert('Se terminó');
+      this.mensaje = 'Se terminó';
     }
   }
 

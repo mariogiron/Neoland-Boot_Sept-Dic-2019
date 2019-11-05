@@ -1,0 +1,24 @@
+<form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control" name="apellidos" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" class="form-control" name="direccion" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control" name="edad" ngModel>
+    </div>
+    {{ formulario.value | json }}
+    <input type="submit" value="Enviar" class="btn btn-block btn-primary" />
+</form>
+
+<p #parrafoPpal>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias esse delectus sunt deleniti.
+    Delectus odit
+    vitae blanditiis. Sint ut dolore qui aliquam voluptatibus exercitationem quas quis molestiae quia ipsam?</p>
