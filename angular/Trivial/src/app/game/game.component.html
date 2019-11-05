@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2 class="text-center">{{ preguntas[preguntaActiva].texto }}</h2>
+        </div>
+    </div>
+    <div class="mt-4">
+        <botonera [respuestas]="preguntas[preguntaActiva].respuestas"
+            (respuestaSeleccionada)="manejarRespuestaSeleccionada($event)"></botonera>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6">
+            Preguntas acertadas: {{ preguntasAcertadas }}
+        </div>
+        <div class="col-6">
+            Preguntas restantes: {{ preguntas.length - preguntaActiva }}
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar"
+                    [ngStyle]="{width: ((preguntaActiva/preguntas.length)*100)+'%'}" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    {{(preguntaActiva/preguntas.length)*100}}%</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,9 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { SaludoComponent } from './saludo/saludo.component';
 import { AboutComponent } from './about/about.component';
 import { Error404Component } from './error404/error404.component';
+import { ProductoComponent } from './producto/producto.component';
+import { RelatedComponent } from './related/related.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { Error404Component } from './error404/error404.component';
     ContactoComponent,
     SaludoComponent,
     AboutComponent,
-    Error404Component
+    Error404Component,
+    ProductoComponent,
+    RelatedComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
