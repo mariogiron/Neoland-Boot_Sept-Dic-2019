@@ -1,1 +1,30 @@
-<p>model works!</p>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Repite Password</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Privacidad</label>
+        <input type="checkbox" class="form-control">
+    </div>
+</form>

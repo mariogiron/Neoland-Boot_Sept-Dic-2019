@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-model',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelComponent implements OnInit {
 
-  constructor() { }
+  formulario: FormGroup;
+
+  constructor() {
+    this.formulario = new FormGroup({
+      nombre: new FormControl(''),
+      apellidos: new FormControl(''),
+      edad: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl(''),
+      repite_password: new FormControl(''),
+      privacidad: new FormControl('')
+    });
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+
   }
 
 }

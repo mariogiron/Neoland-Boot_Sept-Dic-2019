@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-template',
@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class TemplateComponent implements OnInit {
 
-  @ViewChild('parrafoPpal', { static: false }) parrafo: any;
+  @ViewChild('parrafoPpal', { static: false }) parrafo: ElementRef;
 
   constructor() { }
 
