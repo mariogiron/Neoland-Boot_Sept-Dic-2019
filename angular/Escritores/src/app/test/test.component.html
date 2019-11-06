@@ -1,14 +1,28 @@
+<button (click)="manejarClick()">Mayores de 30</button>
+
+<form [formGroup]="formPersona" (ngSubmit)="onSubmit()">
+    Id <input type="text" formControlName="id">
+    Nombre <input type="text" formControlName="nombre">
+    Apellidos <input type="text" formControlName="apellidos">
+    Edad <input type="text" formControlName="edad">
+    <input type="submit" value="Enviar">
+</form>
+
 <table>
     <tr>
         <th>Id</th>
         <th>Nombre</th>
         <th>Apellidos</th>
         <th>Edad</th>
+        <th>Acciones</th>
     </tr>
     <tr *ngFor="let pers of arr">
         <td>{{pers.id}}</td>
         <td>{{pers.nombre}}</td>
         <td>{{pers.apellidos}}</td>
         <td>{{pers.edad}}</td>
+        <td>
+            <button (click)="mostrarPersona(pers.id)">Alerta</button>
+        </td>
     </tr>
 </table>
