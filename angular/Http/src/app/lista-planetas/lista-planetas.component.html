@@ -1,0 +1,12 @@
+<button (click)="cambiaPagina(-1)" [disabled]="paginaActual === 1">
+    anterior
+</button>
+<button (click)="cambiaPagina(1)" [disabled]="paginaActual === numPaginas">
+    siguiente
+</button>
+
+<ul *ngFor="let planeta of planetas">
+    <li>{{planeta.name}}</li>
+    <li>{{planeta.diameter}}</li>
+    <li>{{planeta.population}}</li>
+</ul>
