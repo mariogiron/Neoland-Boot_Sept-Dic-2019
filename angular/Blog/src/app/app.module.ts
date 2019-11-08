@@ -4,18 +4,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { ListaEscritoresComponent } from './lista-escritores/lista-escritores.component';
-import { DetalleEscritorComponent } from './detalle-escritor/detalle-escritor.component';
-import { ListaLibrosComponent } from './lista-libros/lista-libros.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ListaPostsComponent } from './lista-posts/lista-posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    ListaEscritoresComponent,
-    DetalleEscritorComponent,
-    ListaLibrosComponent
+    FormularioComponent,
+    ListaPostsComponent
   ],
   imports: [
     BrowserModule,

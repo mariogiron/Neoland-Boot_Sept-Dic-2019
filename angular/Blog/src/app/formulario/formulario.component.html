@@ -1,0 +1,32 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Título</label>
+        <input type="text" class="form-control" formControlName="titulo">
+    </div>
+
+    <div class="form-group">
+        <label>Texto</label>
+        <textarea class="form-control" cols="30" rows="10" formControlName="texto"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Autor</label>
+        <input type="text" class="form-control" formControlName="autor">
+    </div>
+
+    <div class="form-group">
+        <label>Imagen</label>
+        <input type="text" class="form-control" formControlName="imagen">
+    </div>
+
+    <div class="form-group">
+        <label>Categoría</label>
+        <select class="form-control" formControlName="categoria">
+            <option value="informatica">Informática</option>
+            <option value="opinion">Opinión</option>
+            <option value="noticias">Noticias</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Enviar" class="btn btn-outline-info btn-block">
+</form>

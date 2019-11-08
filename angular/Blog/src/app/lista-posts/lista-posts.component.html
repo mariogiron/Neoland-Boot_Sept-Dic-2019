@@ -1,0 +1,21 @@
+<select class="form-control mt-5" (change)="manejarSelect($event)">
+    <option value="informatica">Informática</option>
+    <option value="opinion">Opinión</option>
+    <option value="noticias">Noticias</option>
+</select>
+
+<div class="card mb-3 mt-3" *ngFor="let post of arrPosts">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img [src]="post.imagen" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{post.titulo}}</h5>
+                <p class="card-text">{{post.texto}}</p>
+                <p class="card-text"><small class="text-muted">{{post.fecha | date: 'dd-MM-yyyy hh:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{post.categoria}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
