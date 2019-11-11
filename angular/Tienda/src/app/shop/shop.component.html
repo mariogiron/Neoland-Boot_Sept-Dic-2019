@@ -1,0 +1,10 @@
+<select (change)="onChange($event)">
+    <option value="macbook">Macbook</option>
+    <option value="iphone">iPhone</option>
+    <option value="ipad">iPad</option>
+</select>
+<div *ngFor="let producto of arrProductos">
+    Nombre: {{producto.name}}
+    Precio: {{producto.price}}
+    <button (click)="handleClick(producto)">Agregar Carrito</button>
+</div>

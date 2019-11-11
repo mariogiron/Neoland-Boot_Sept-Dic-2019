@@ -1,0 +1,44 @@
+{
+    "personas": [
+        {
+            "nombre": "Mario",
+            "apellidos": "Girón",
+            "direccion": "C Gran Via",
+            "edad": 23
+        },
+        {
+            "nombre": "Rosa",
+            "apellidos": "García",
+            "direccion": "C Leganitos 14",
+            "edad": 57
+        },
+        {
+            "nombre": "Jose Luis",
+            "apellidos": "Martínez",
+            "direccion": "Pza Dos de Mayo",
+            "edad": 87
+        }
+    ],
+    "tareas": [
+        {
+            "mensaje": "Sacar al perro",
+            "prioridad": "media"
+        },
+        {
+            "mensaje": "Poner la lavadora",
+            "prioridad": "alta"
+        },
+        {
+            "mensaje": "Jugar al candy crush",
+            "prioridad": "baja"
+        },
+        {
+            "mensaje": "Estudiar Angular YA!!",
+            "prioridad": "altísima"
+        },
+        {
+            "mensaje": "¿Qué es Angular?",
+            "prioridad": "media"
+        }
+    ]
+}
