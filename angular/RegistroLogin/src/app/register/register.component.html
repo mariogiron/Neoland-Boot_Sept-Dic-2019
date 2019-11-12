@@ -1,0 +1,10 @@
+<form [formGroup]="formulario" (ngSubmit)="envioFormularioRegistro()" novalidate>
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="surname">
+    <input type="text" formControlName="username">
+    <input type="text" formControlName="password">
+    <input type="text" formControlName="mail">
+    <input type="text" formControlName="address">
+    <input type="text" formControlName="age">
+    <input type="submit" value="Enviar">
+</form>
