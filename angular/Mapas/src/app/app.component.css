@@ -1,3 +1,8 @@
 .mapa {
     height: 600px;
 }
+
+#inputPlaces {
+    width: 300px;
+    height: 20px;
+}

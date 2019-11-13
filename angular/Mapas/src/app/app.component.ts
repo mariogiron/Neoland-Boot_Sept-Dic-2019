@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
 
   @ViewChild('GMap', { static: false }) mapaElement: any;
 
+  directionsService: any;
+  directionsDisplay: any;
+
   map: any;
 
   ngOnInit() {
@@ -24,6 +27,10 @@ export class AppComponent implements OnInit {
   }
 
   loadMap(position) {
+
+    this.directionsService = new google.maps.DirectionsService();
+    this.directionsDisplay = new google.maps.DirectionsRenderer();
+
     const mapProps = {
       center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
       zoom: 17,
@@ -31,6 +38,8 @@ export class AppComponent implements OnInit {
     };
     // console.log(this.mapaElement.nativeElement)
     this.map = new google.maps.Map(document.getElementById('mapId'), mapProps);
+
+    this.directionsDisplay.setMap(this.map);
 
     const marker = new google.maps.Marker({
       position: mapProps.center,
@@ -50,6 +59,38 @@ export class AppComponent implements OnInit {
       newMarker.setMap(this.map);
     });
 
+    const options = {
+      types: ['address']
+    };
+    const autocomplete = new google.maps.places.Autocomplete(document.getElementById('inputPlaces'), options);
+
+    autocomplete.addListener('place_changed', function () {
+      const place = autocomplete.getPlace();
+      console.log(place.geometry.location.lat());
+      console.log(place.geometry.location.lng());
+
+      this.map.setCenter(place.geometry.location);
+
+      const markerPlace = new google.maps.Marker({
+        position: place.geometry.location
+        // position: new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng())
+      });
+      markerPlace.setMap(this.map);
+    }.bind(this));
+
+  }
+
+  manejarClick() {
+    const options = {
+      origin: 'plaza españa 11, madrid',
+      destination: 'lopez de hoyos 34, madrid',
+      travelMode: google.maps.TravelMode.TRANSIT
+    };
+
+    this.directionsService.route(options, function (result, status) {
+      console.log(result);
+      this.directionsDisplay.setDirections(result);
+    }.bind(this));
   }
 
 }
