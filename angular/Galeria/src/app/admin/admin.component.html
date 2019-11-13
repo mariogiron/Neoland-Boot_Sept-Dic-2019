@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Url</th>
+            <th>Activa</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let imagen of arrImagenes; let i = index">
+            <td>{{imagen.titulo}}</td>
+            <td>{{imagen.descripcion}}</td>
+            <td>{{imagen.url}}</td>
+            <td>{{imagen.activa}}</td>
+            <td>
+                <button class="btn btn-outline-primary" (click)="manejarActDes(imagen)">Act/Des</button>
+                <button class="btn btn-outline-dark" (click)="manejarEditar(imagen)">Editar</button>
+                <button (click)="manejarEliminar(i)" class="btn btn-outline-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<app-editar [img]="imagenAEditar" *ngIf="imagenAEditar"></app-editar>

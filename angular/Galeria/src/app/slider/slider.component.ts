@@ -1,3 +1,5 @@
+import { Imagen } from './../models/imagen.model';
+import { ImagenesService } from './../imagenes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+  arrImagenes: Imagen[];
 
-  ngOnInit() {
+  constructor(private imagenesService: ImagenesService) { }
+
+  async ngOnInit() {
+    try {
+      this.arrImagenes = await this.imagenesService.getActiveImages();
+    } catch (err) {
+      console.log(err);
+    }
   }
 
 }
