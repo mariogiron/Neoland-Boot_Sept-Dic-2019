@@ -1,1 +1,2 @@
-<div class="semaforo" [@cambioColor]="'verde'"></div>
+<h1 [ngClass]="{ animated: true, infinite: (estadoAnimacion === 'ambar'), jello: true}">El Semáforo</h1>
+<div class="semaforo" [@cambioColor]="estadoAnimacion"></div>
