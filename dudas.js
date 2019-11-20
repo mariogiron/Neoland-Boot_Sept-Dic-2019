@@ -13,25 +13,25 @@
 // console.log('Hola Mundo');
 // console.log(numero);
 
-function devuelveProm() {
-    let prom = new Promise((resolve, reject) => {
-        if (true) {
-            resolve({ tit: 'mensaje', num: 3, bool: true });
-        } else {
-            reject(12, false);
-        }
-    });
-    return prom;
-}
+// function devuelveProm() {
+//     let prom = new Promise((resolve, reject) => {
+//         if (true) {
+//             resolve({ tit: 'mensaje', num: 3, bool: true });
+//         } else {
+//             reject(12, false);
+//         }
+//     });
+//     return prom;
+// }
 
-devuelveProm().then((obj) => {
-    console.log(obj);
-}).catch((pNumero, pBoolean) => {
-    console.log(pNumero, pBoolean);
-});
+// devuelveProm().then((obj) => {
+//     console.log(obj);
+// }).catch((pNumero, pBoolean) => {
+//     console.log(pNumero, pBoolean);
+// });
 
-(async () => {
-    await devuelveProm();
-})();
+// (async () => {
+//     await devuelveProm();
+// })();
 
 

@@ -1,7 +1,27 @@
+mixin crearLista(pLista)
+  if pLista
+    ul
+      each item in pLista
+        li= JSON.stringify(item)
+      else
+        li La lista no tiene elementos
+  else
+    p La lista es nula
+
 doctype html
 html
   head
-    title= title
+    block title
+      title Título por defecto
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    include includes/header
+    .container.mt-5
+      block contenido
+    .mt-5.text-center
+      block footer
+        footer Pagina creada con mucho ❤️ por Mario

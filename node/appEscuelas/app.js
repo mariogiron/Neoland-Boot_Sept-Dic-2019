@@ -3,18 +3,28 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const fs = require('fs');
+const Alumno = require('./models/alumno');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products');
-const personasRouter = require('./routes/personas');
-const escritoresRouter = require('./routes/escritores');
 
 var app = express();
 
+// Conecto con la Base de datos
+require('./db');
+
+// CÓDIGO DE PRUEBA. BORRAR O COMENTAR
+Alumno.getAll()
+  .then((rows) => {
+    console.log(rows);
+  }).catch((err) => {
+    console.log(err);
+  });
+// Alumno.getAllCallback((err, rows) => {
+//   console.log(rows);
+// });
+
 // view engine setup
-// Configuramos dónde se encuentra nuestro directorio de rutas
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -24,22 +34,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req, res, next) => {
-  console.log(new Date());
-  next();
-});
-
-app.use((req, res, next) => {
-  fs.appendFile('./log.txt', `Método: ${req.method}. URL: ${req.url}\n`, () => {
-    next();
-  });
-});
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/productos', productsRouter);
-app.use('/personas', personasRouter);
-app.use('/escritores', escritoresRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
