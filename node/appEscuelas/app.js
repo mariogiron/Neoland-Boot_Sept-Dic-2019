@@ -7,6 +7,7 @@ const Alumno = require('./models/alumno');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const alumnosRouter = require('./routes/alumnos');
 
 var app = express();
 
@@ -14,12 +15,12 @@ var app = express();
 require('./db');
 
 // CÓDIGO DE PRUEBA. BORRAR O COMENTAR
-Alumno.getAll()
-  .then((rows) => {
-    console.log(rows);
-  }).catch((err) => {
-    console.log(err);
-  });
+// Alumno.getAll()
+//   .then((rows) => {
+//     console.log(rows);
+//   }).catch((err) => {
+//     console.log(err);
+//   });
 // Alumno.getAllCallback((err, rows) => {
 //   console.log(rows);
 // });
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/alumnos', alumnosRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

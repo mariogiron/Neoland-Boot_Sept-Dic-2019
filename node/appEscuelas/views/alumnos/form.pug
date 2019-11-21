@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    h2.mt-5 Nuevo Alumno
+    form(action="/alumnos/create", method="POST")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre")
+        .form-group
+            label Apellidos
+            input.form-control(type="text", name="apellidos")
+        .form-group
+            label Edad
+            input.form-control(type="text", name="edad")
+        .form-group
+            label Email
+            input.form-control(type="text", name="email")
+        .form-group
+            label Nota Media
+            input.form-control(type="text", name="notamedia")
+        .form-group
+            label Matrícula
+            input.form-control(type="text", name="matricula")
+        .form-group
+            label Discapacidad
+            input.form-control(type="text", name="discapacidad")
+        .form-group
+            label Sexo
+            input.form-control(type="text", name="sexo")
+        input.btn.btn-block.btn-outline-info(type="submit", value="Enviar")

@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+    .mt-5
+        h2 Listado de Alumnos
+        table.table
+            thead
+                tr
+                    th Id
+                    th Nombre
+                    th Apellidos
+                    th Edad
+                    th Email
+                    th Nota Media
+                    th Matrícula
+                    th Fecha Matrícula
+                    th Discapacidad
+                    th Sexo
+            tbody
+                each alumno in arrAlumnos
+                    tr
+                        td= alumno.id
+                        td= alumno.nombre
+                        td= alumno.apellidos
+                        td= alumno.edad
+                        td= alumno.email
+                        td= alumno.notamedia
+                        td= alumno.matricula
+                        td= alumno.fecha_matricula
+                        td #{alumno.discapacidad}%
+                        td= alumno.sexo        
