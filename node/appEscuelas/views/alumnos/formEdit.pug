@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+    h2.mt-5 Edición de Alumno
+    form(action="/alumnos/update", method="POST")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre", value=alumno.nombre)
+        .form-group
+            label Apellidos
+            input.form-control(type="text", name="apellidos", value=alumno.apellidos)
+        .form-group
+            label Edad
+            input.form-control(type="text", name="edad", value=alumno.edad)
+        .form-group
+            label Email
+            input.form-control(type="text", name="email", value=alumno.email)
+        .form-group
+            label Nota Media
+            input.form-control(type="text", name="notamedia", value=alumno.notamedia)
+        .form-group
+            label Matrícula
+            input.form-control(type="text", name="matricula", value=alumno.matricula)
+        .form-group
+            label Discapacidad
+            input.form-control(type="text", name="discapacidad", value=alumno.discapacidad)
+        .form-group
+            label Sexo
+            input.form-control(type="text", name="sexo", value=alumno.sexo)
+        input(type="hidden", name="id", value=alumno.id)
+        input.btn.btn-block.btn-outline-info(type="submit", value="Enviar")

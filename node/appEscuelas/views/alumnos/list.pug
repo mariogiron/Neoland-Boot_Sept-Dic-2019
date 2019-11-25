@@ -16,6 +16,7 @@ block content
                     th Fecha Matrícula
                     th Discapacidad
                     th Sexo
+                    th Acciones
             tbody
                 each alumno in arrAlumnos
                     tr
@@ -28,4 +29,6 @@ block content
                         td= alumno.matricula
                         td= alumno.fecha_matricula
                         td #{alumno.discapacidad}%
-                        td= alumno.sexo        
+                        td= alumno.sexo   
+                        td
+                            a.btn.btn-outline-success(href="/alumnos/edit/"+alumno.id) Editar    
