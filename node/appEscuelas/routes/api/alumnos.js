@@ -3,6 +3,10 @@ const router = express.Router();
 
 const Alumno = require('../../models/alumno');
 
+const middlewares = require('../middlewares');
+
+router.use(middlewares.checkToken);
+
 // GET http://localhost:3000/api/alumnos
 router.get('/', async (req, res) => {
     const rows = await Alumno.getAll();

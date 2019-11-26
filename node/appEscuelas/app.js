@@ -11,6 +11,8 @@ var usersRouter = require('./routes/users');
 const alumnosRouter = require('./routes/alumnos');
 const apiRouter = require('./routes/api');
 
+require('dotenv').config();
+
 var app = express();
 
 // Conecto con la Base de datos
