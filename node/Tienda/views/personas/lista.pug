@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h2 Lista de personas
+    table.table
+        tr
+            th Nombre
+            th Apellidos
+            th Edad
+        each pers in arrPersonas
+            tr
+                td= pers.nombre
+                td= pers.apellidos
+                td= pers.edad
