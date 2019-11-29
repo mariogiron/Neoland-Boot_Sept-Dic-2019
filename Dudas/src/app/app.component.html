@@ -1,0 +1,14 @@
+<router-outlet></router-outlet>
+<input type="text" name="" id="field1">
+<p>{{ valorCampo }}</p>
+
+<input type="text" [(ngModel)]="valorCampo2">
+<p>{{ valorCampo2 }}</p>
+
+<p *ngFor="let num of [1,2,3,4]; let par = even;">
+  <span *ngIf="par">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum accusantium, ipsa ex saepe
+    voluptas
+    voluptate
+    iusto, quae minima voluptates animi veritatis corrupti. Excepturi quisquam debitis atque reprehenderit voluptates ab
+    inventore.</span>
+</p>

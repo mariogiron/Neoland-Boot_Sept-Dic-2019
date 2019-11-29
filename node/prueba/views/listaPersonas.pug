@@ -1,0 +1,43 @@
+extends layout
+
+block title
+    title Lista de Personas
+
+block contenido
+    h1 Cabecera de la página
+    a(href="http://www.gooogle.es") Google.es
+
+    .row
+        .col-6
+            div
+                p Esto es un párrafo
+            div
+                p= nombre
+                p Mi nombre es #{nombre}
+                // Esto es un comentario HTML
+                //- Comentario solo para mi disfrute
+        .col-6
+            #primero.rojo
+                p Dentro del div rojo
+            #segundo
+                p(class=clases) Dentro del div segundo
+            #tercero
+                case manzanas
+                    when 0
+                        p No tengo manzanas
+                    when 1
+                        p Tengo una manzanita
+                    default
+                        p Tengo #{manzanas} manzanas
+            #cuarto
+                ul
+                    - for(let i = 0; i<clases.length; i++)
+                        li= clases[i]
+        #quinto
+            ul
+                each cadena, indice in clases
+                    li= indice + ' ' + cadena
+                    //- li #{indice} #{cadena}
+
+block footer
+    footer Pie de página para la lista de personas

@@ -1,0 +1,35 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos">
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control" formControlName="edad">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+        <label>Nota Media</label>
+        <input type="text" class="form-control" formControlName="notamedia">
+    </div>
+    <div class="form-group">
+        <label>Matrícula</label>
+        <input type="text" class="form-control" formControlName="matricula">
+    </div>
+    <div class="form-group">
+        <label>Discapacidad</label>
+        <input type="text" class="form-control" formControlName="discapacidad">
+    </div>
+    <div class="form-group">
+        <label>Sexo</label>
+        <input type="text" class="form-control" formControlName="sexo">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-block btn-dark">
+</form>

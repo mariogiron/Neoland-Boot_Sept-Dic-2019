@@ -6,9 +6,17 @@ block content
         tr
             th Nombre
             th Apellidos
+            th Nombre Completo            
             th Edad
+            th Email
+            th Acciones
         each pers in arrPersonas
             tr
                 td= pers.nombre
-                td= pers.apellidos
+                td= pers.apellidos 
+                td= pers.nombre_completo               
                 td= pers.edad
+                td= pers.email
+                td
+                    a.btn.btn-primary.btn-sm(href="/personas/edit/"+pers._id) Editar
+                    a.btn.btn-danger.btn-sm(href="/personas/delete/"+pers._id, onclick="return confirm('¿Estás seguro de eliminar a esta persona?')") Eliminar

@@ -1,0 +1,27 @@
+<h2>Lista de Alumnos</h2>
+<table class="table">
+    <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Email</th>
+        <th>Nota Media</th>
+        <th>Fecha Matrícula</th>
+        <th>Matrícula</th>
+        <th>Discapacidad</th>
+        <th>Sexo</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let alumno of arrAlumnos">
+            <td>{{ alumno.nombre }}</td>
+            <td>{{ alumno.apellidos }}</td>
+            <td>{{ alumno.edad }}</td>
+            <td>{{ alumno.email }}</td>
+            <td>{{ alumno.notamedia }}</td>
+            <td>{{ alumno.fecha_matricula }}</td>
+            <td>{{ alumno.matricula }}</td>
+            <td>{{ alumno.discapacidad }}</td>
+            <td>{{ alumno.sexo }}</td>
+        </tr>
+    </tbody>
+</table>
