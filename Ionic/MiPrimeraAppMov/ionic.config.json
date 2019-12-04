@@ -1,0 +1,7 @@
+{
+  "name": "MiPrimeraAppMov",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
